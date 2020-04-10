@@ -11,7 +11,8 @@ class Genre < ActiveRecord::Base
   end
 
   def all_artist_names
-    ars = self.artists.map{|a| ars << a.name}
+    ars = []
+    self.artists.map{|a| ars << a.name}
     ars
   end
 end
